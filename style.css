@@ -145,12 +145,31 @@ nav ul {
 .contenu-article {
     width: 100%;
     margin: 10px 0px;
+    display: flex;
  }
+
 
 .contenu-article p{
     display:inline-block ;
     width: 95%;
+    z-index: 2;
 }
+
+#photo-campus{
+    width: 20%;
+    height:5%;
+    z-index: 0;
+    left: 50%;
+ }
+ /* z-index test  */
+ #box-1{
+    height:  20%;
+    background-color: red;
+ }
+ #box-2{
+    background-color: green;
+    
+ }
 
 /*** FORMULAIRE ***/ 
 form{
