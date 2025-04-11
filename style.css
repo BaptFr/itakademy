@@ -1,8 +1,23 @@
+
+/*** VARIABLES ***/
+:root{
+    --main-color: ;
+    --font-size-s: 1em;
+    --font-size-m: 1.5em;
+    --font-size-l: 2em;
+    --font-size-xl: 2.5em; 
+    --font-size-xxl: 2.8em; 
+}
+
+
+/*** GLOBAL ***/
 * {
     margin: 0;
     padding: 0;
 }
-
+ hr {
+    margin: 4em 0 2em 0;
+ }
 body {
     width:100%;
     padding: 50px;
@@ -11,26 +26,46 @@ body {
     flex-direction: column;
     gap: 4em;
 }
-header {
-    position: relative;
+main {
+    width: 100%
 }
+
 footer {
     position:fixed;
+    width: 110%;
     bottom: 0;
     height: 100px;
+    margin-left: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5481c0;
+    box-shadow:  10px 10px 10px 10px rgb(94, 94, 94);
+}
 
+p{
+    font-size: var(--font-size-m)
 }
 
 h1 {
+    font-size: var(--font-size-xl);
     text-align: center;
     margin-bottom: 10px;
 }
+h2 {
+    font-size: var(--font-size-l);
+    margin: 1em 0;
+    text-decoration: underline;
+}
+
 
 ul{
     list-style-type: none;
     color: black;
 }
 
+
+/*** NAV ***/
 nav {
     width: 100%;
     display: flex;
@@ -45,6 +80,10 @@ nav ul {
     justify-content: center;
     align-items: center;
     gap: 1em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #5481c0;
+    box-shadow:  5px 5px 5px 5px #5e5e5e;
 
 }
 
@@ -52,10 +91,77 @@ nav ul {
 .link {
  text-decoration:  none;
  color: black;
-    
-
+ font-size: 1.4em;
 }
+
+.link:visited {
+    color: rgb(63, 62, 62);
+ }
 .link:hover {
-   color: green;
+    color: white;
+    text-decoration: underline;
+    transition: text-decoration 3s;
+ }
+.link:focus {
+    color: black;
+ }
+.link:active {
+    color: green;
+ }
+
+
+
+ /*** CONTENU  ***/
+.section-articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenu-article {
+    width: 100%;
+ }
+
+.contenu-article p{
+    display:inline-block ;
+    width: 95%;
+}
+
+/*** FORMULAIRE ***/ 
+form{
+    padding: 50px
+ 
+}
+form ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+form li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
 }
+label{ 
+    font-size: var(--font-size-m);
+    font-weight: bold;
+    margin-bottom: 0.8em;
+}
+input{
+ height: 1.5em;
+}
+textarea{
+    width: 500px;
+    height: 12em;
+}
+input, textarea{
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px rgb(63, 62, 62);
+    margin-bottom: 1em;
+}
+
+/*** RESPONSIVE MEDIA QUERIES ***/
